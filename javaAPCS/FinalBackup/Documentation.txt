@@ -1,0 +1,19 @@
+Protocol:
+	Use port 9001
+	Client sends:
+		IDNO.FUNC.INFO;
+		IDNO = ID number of the client (unless it's 'n', in which case FUNC is name of new client)
+		FUNC = request/query for the client
+			Update:
+				if in-game, tells of new moves
+				if in-Queue, tells of matches and in-game-ness
+				if none, string of name, rank, etc.
+			Qon:
+				Gets into the Queue, client responsibility to update
+			Qoff:
+				removes from queue, if in it
+			Move:
+				if allowed:
+					sets in-game move 
+		N.name:
+			return ID

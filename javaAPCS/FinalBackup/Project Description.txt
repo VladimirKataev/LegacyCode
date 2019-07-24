@@ -1,0 +1,9 @@
+A game of connect 4, wherein a stack of coins in a linear fashion are dropped, turn by turn, to make a line cordially or diagonally
+It is a 1v1 game, but held on a server holding many games and many clients.
+After a game is over, the server changes the score of each client so as to better match them up in a later game.
+Classes:
+	Serv - The server running all games and clients
+	ClientRecord - A client object to be kept by server to remember names, id, score, etc
+	GameBoard - A gameboard holding all moves, player pointers, and other game-specific methods
+	Client - A client-end program to connect to the server so as to play connect4
+	(maybe others, depending on necessity)
