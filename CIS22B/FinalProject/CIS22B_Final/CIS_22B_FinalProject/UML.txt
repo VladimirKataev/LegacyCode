@@ -1,0 +1,27 @@
+Class Book{
+	  string ISBN, name;
+	  int quantity;
+	  double retailPrice, Wholesale cost;
+	  Date published, added
+	}
+	
+	Class Date{
+	  Date(d,m,y);
+	  operator<,>;
+	}
+	
+	
+	
+	
+	main{
+	  int state;
+	
+	  switch(state){ (exception requirement here)
+	    cashier;
+	    report;
+	    inventory;  
+	  }
+	
+	  bookFactory() (populates array of books from file);
+	
+	}

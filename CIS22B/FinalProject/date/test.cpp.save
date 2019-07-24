@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+
+
+int main(){
+	Date a(6/8/1999); //my bday
+	Date b();	//jesus bday
+
+	cout << a < b << endl;
+	cout << a == b << endl;
+
+
+
+}
