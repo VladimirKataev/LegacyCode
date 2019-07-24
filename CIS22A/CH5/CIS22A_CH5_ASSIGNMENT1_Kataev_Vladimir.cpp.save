@@ -1,0 +1,11 @@
+/*	Written By Vladimir Kataev
+Does the specified assignment
+*/
+#include<iostream>			
+#include<fstream>			
+#include<string>			
+using namespace std;			
+int main(){				
+	
+	return 0;				
+}	

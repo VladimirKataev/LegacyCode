@@ -1,0 +1,16 @@
+/*
+	Demostrates iterators
+*/
+#include<iostream>
+using namespace std;
+
+int main(){
+	string planets[] = { "Mercury", "Venus", "Earth", "Mars",
+			"Jupiter", "Saturn", "Uranus",
+			"Neptune", "Pluto (a dwarf planet)" };
+
+	cout << "Here are the planets:\n"; // Display the values in the array.15 for (stringval : planets)16 cout << val << endl;
+
+
+	return 0;
+}

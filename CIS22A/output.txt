@@ -1,0 +1,8 @@
+The orders were:
+De Anza Burger X1	$5.25
+Bacon Cheese Burger X2	$11.5
+Mushroom Swiss Burger X34	$202.3
+Western Burger X4	$23.8
+Don Cali Burger X5	$29.75
+Pretax:$272.6
+Post tax:$272.6

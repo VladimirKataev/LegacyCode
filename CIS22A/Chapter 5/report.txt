@@ -1,0 +1,6 @@
+--------- Month 0
+IN:0 OUT:0
+Your balance is 21.6667
+--------- Month 1
+IN:20 OUT:10
+Your balance is 34.3056
