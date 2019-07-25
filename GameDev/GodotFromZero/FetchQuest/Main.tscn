@@ -1,0 +1,193 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://MainCharMovementAndColl.gd" type="Script" id=1]
+[ext_resource path="res://Camera.gd" type="Script" id=2]
+[ext_resource path="res://Collider.gd" type="Script" id=3]
+[ext_resource path="res://MainCharSingle.png" type="Texture" id=4]
+[ext_resource path="res://Item.png" type="Texture" id=5]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Main" type="Node2D"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+transform/scale = Vector2( 1, 2 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+script/script = ExtResource( 2 )
+
+[node name="MainChar" type="Area2D" parent="KinematicBody2D"]
+
+transform/scale = Vector2( 1, 0.5 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 2, 0, 0 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D/MainChar"]
+
+transform/scale = Vector2( 1, 2 )
+shape = SubResource( 1 )
+trigger = true
+_update_shape_index = 0
+script/script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+
+transform/scale = Vector2( 1, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="Pointer" type="Sprite" parent="KinematicBody2D"]
+
+[node name="FirstItem" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1369.55, -247.187 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 3, 0, 0, 3, 0, 0 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FirstItem"]
+
+transform/scale = Vector2( 3, 3 )
+shape = SubResource( 2 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Sprite" type="Sprite" parent="FirstItem"]
+
+texture = ExtResource( 5 )
+
+[node name="SecondItem" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1262.92, 993.393 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 3, 0, 0, 3, 0, 0 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SecondItem"]
+
+transform/scale = Vector2( 3, 3 )
+shape = SubResource( 2 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Sprite" type="Sprite" parent="SecondItem"]
+
+texture = ExtResource( 5 )
+
+[node name="ThirdItem" type="Area2D" parent="."]
+
+transform/pos = Vector2( -898.354, 890.866 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 3, 0, 0, 3, 0, 0 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ThirdItem"]
+
+transform/scale = Vector2( 3, 3 )
+shape = SubResource( 2 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Sprite" type="Sprite" parent="ThirdItem"]
+
+texture = ExtResource( 5 )
+
+[node name="FourthItem" type="Area2D" parent="."]
+
+transform/pos = Vector2( -845.04, -296.4 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 3, 0, 0, 3, 0, 0 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FourthItem"]
+
+transform/scale = Vector2( 3, 3 )
+shape = SubResource( 2 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Sprite" type="Sprite" parent="FourthItem"]
+
+texture = ExtResource( 5 )
+
+[node name="FifthItem" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1658.68, 1106.17 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 3, 0, 0, 3, 0, 0 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FifthItem"]
+
+transform/scale = Vector2( 3, 3 )
+shape = SubResource( 2 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Sprite" type="Sprite" parent="FifthItem"]
+
+texture = ExtResource( 5 )
+
+
