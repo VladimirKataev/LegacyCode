@@ -1,0 +1,4 @@
+#include"Chess.h"
+void Piece::setValues(int x, int y){
+
+}
